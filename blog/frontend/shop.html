@@ -16,7 +16,7 @@
 				<div class="ptr-preloader">
 					<div class="ptr-prel-content">
 						<!-- Hint: You may need to change the img height and opacity to match your logo type. You can do this from the "theme.css" file (find: ".ptr-prel-image"). -->
-					<img src="{% static 'assets/img/logo-l.png' 5}" class="ptr-prel-image tt-logo-light" alt="Logo">
+					<img src="{% static 'assets/img/logo-l.png' %}" class="ptr-prel-image tt-logo-light" alt="Logo">
 					</div> <!-- /.ptr-prel-content -->
 				</div> <!-- /.ptr-preloader -->
 			</div>
@@ -174,23 +174,26 @@
 
 											<!-- Begin tt-Grid item
 											======================== -->
+											{% for x in post %}
+
 											<div class="tt-grid-item">
+
 												<div class="ttgr-item-inner">
 
 													<!-- Begin tt-Product 
-													====================== --> 
+													====================== -->
+
 													<div class="tt-product">
-														{% for x in post %}
 
 														<div class="tt-product-image-holder">
 															<a href="{% url 'shop_single' x.slug %}" class="tt-product-image-wrap" data-cursor="View<br>Product">
 																
 																<figure class="tt-product-image">
-																<img class="anim-zoomin tt-lazy" src="{{ x.rasm2.url }}" data-src="{{ x.rasm1.url }}" alt="image" />
+																<img class="anim-zoomin tt-lazy" src="{{ x.rasm1.url }}" data-src="{{ x.rasm1.url }}" alt="image" />
 																</figure> 
 																
 																<figure class="tt-product-hover-image">
-																<img class="tt-lazy" src="{{ x.rasm2.url }}" data-src="{{ x.rasm2.url }}" alt="image" />
+																<img class="tt-lazy" src="{{ x.rasm1.url }}" data-src="{{ x.rasm1.url }}" alt="image" />
 																</figure> 
 
 																<!-- <div class="tt-product-padges">
@@ -248,12 +251,15 @@
 																</div> <!-- /.tt-product-buttons -->
 															</div> <!-- /.tt-pi-price-btn-wrap -->
 														</div> <!-- /.tt-product-info -->
-														{% endfor %}
 													</div>
+
 													<!-- End tt-Product -->
 
 												</div> <!-- /.ttgr-item-inner -->
+
 											</div>
+											{% endfor %}
+
 											<!-- End tt-Grid item -->
 
 

@@ -11,6 +11,7 @@ class Post(models.Model):
     nomi = models.CharField(max_length=500)
     narxi = models.IntegerField()
     rasm1 = models.ImageField(upload_to='media/', default='10')
+    slug = models.SlugField(null='True')
     # rasm1 = models.ImageField(upload_to='media/')
 
 

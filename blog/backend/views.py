@@ -10,7 +10,7 @@ def shop(request):
     return render(request, 'shop.html',context)
 
 def shop_single(request, slug):
-    post = Post.objects.get(slug==slug)
+    post = Post.objects.get(slug=slug)
     context = {
         'post': post
     }
