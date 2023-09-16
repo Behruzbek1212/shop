@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404
 from .models import *
 
 
@@ -11,8 +11,10 @@ def shop(request):
 
 def shop_single(request, slug):
     post = Post.objects.get(slug=slug)
+    rasmlar = PostImage.objects.filter(post=post)
     context = {
-        'post': post
+        'post': post,
+        'rasmlar': rasmlar
     }
     return render(request, 'shop-single.html', context)
 
@@ -38,3 +40,9 @@ def shop_reset_password(request):
 
 def page_not_found(request):
     return render(request, '404.html')
+
+
+
+
+
+
