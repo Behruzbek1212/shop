@@ -220,7 +220,7 @@
 
 													<!-- Begin single product availability -->
 													<div class="single-product-availability">
-														<span class="spa-in-stock">Sotuvda</span>
+														<span class="spa-in-stock">Sotuvda: {{ post.sotuvda_nechta }} dona</span>
 														<!-- <span class="spa-out-of-stock">Out of stock</span> -->
 													</div>
 													<!-- End single product availability -->
@@ -260,28 +260,7 @@
 
 												<!-- Begin single product variations 
 												===================================== -->
-												<div class="single-product-variations">
-<!-- 
-													<div class="tt-form-group">
-														<label>License:</label>
-														<select name="license" class="tt-form-control" required>
-															<option value="" disabled selected>Choose an option</option>
-															<option value="regular">Regular</option>
-															<option value="extended">Extended</option>
-														</select>
-													</div> -->
-
-													<!-- <div class="tt-form-group">
-														<label>Size:</label>
-														<select name="size" class="tt-form-control" required>
-															<option value="" disabled selected>Choose an option</option>
-															<option value="M">M</option>
-															<option value="L">L</option>
-															<option value="xl">XL</option>
-														</select>
-													</div> -->
-													
-												</div>
+											
 												<!-- End single product variations -->
 
 												<!-- Begin single product add to cart 
@@ -390,10 +369,9 @@
 									-->
 									<div class="tt-tabs-buttons">
 										<ul>
-											<li><button class="tt-tab-btn sp-description-tab active" data-content-id="sp-description-content">Description</button></li>
-											<li><button class="tt-tab-btn sp-addit-info-tab" data-content-id="sp-addit-info-content">Additional Info</button></li>
-											<li><button class="tt-tab-btn sp-custom-tab" data-content-id="sp-custom-content-1">License</button></li>
-											<li><button class="tt-tab-btn sp-reviews-tab" data-content-id="sp-reviews-content">Reviews (3)</button></li>
+											<li><button class="tt-tab-btn sp-description-tab active" data-content-id="sp-description-content">Barcha Malumotlar</button></li>
+											<li><button class="tt-tab-btn sp-addit-info-tab" data-content-id="sp-addit-info-content">Xususiyatlari</button></li>
+											<li><button class="tt-tab-btn sp-reviews-tab" data-content-id="sp-reviews-content">Sharhlar (3)</button></li>
 										</ul>
 									</div>
 									<!-- End tt-Tabs buttons -->
@@ -404,9 +382,8 @@
 
 										<!-- Begin tab content -->
 										<div id="sp-description-content" class="tt-tab-content active">
-											<p>Up branch to easily missed by do. Admiration considered acceptance too led one melancholy expression. Are will took form the nor true. Winding enjoyed minuter her letters evident use eat colonel. He attacks observe mr cottage inquiry am examine gravity. Are dear but near left was. Year kept on over so as this of. She steepest doubtful betrayed formerly him. Active one called uneasy our seeing see cousin tastes its. Ye am it formed indeed agreed relied piqued.</p>
+											<p>{{ post.barcha_malumotlar }}</p>
 
-											<p>Mockups by: <a href="https://www.mockupcloud.com/" target="_blank" rel="noopener">mockupcloud.com</a></p>
 										</div>
 										<!-- End tab content -->
 
@@ -418,24 +395,40 @@
 											<table class="tt-table">
 												<tbody>
 													<tr>
-														<th>High Resolution:</th>
-														<td>Yes</td>
+														<th>Operativ xotirasi:</th>
+														<td>{{ post.operativ_xotira }} gb</td>
 													</tr>
 													<tr>
-														<th>Layered:</th>
-														<td>Yes</td>
+														<th>Xotira:</th>
+														<td>{{ post.xotira }} gb</td>
 													</tr>
 													<tr>
-														<th>Graphics Files Included:</th>
-														<td>Photoshop PSD, JPG Images</td>
+														<th>Operatsion tizim:</th>
+														<td>{{ post.operatsion_tizim }}</td>
 													</tr>
 													<tr>
-														<th>Pixel Dimensions:</th>
-														<td>5600x4000</td>
+														<th>Asosiy kamera:</th>
+														<td>{{ post.asosiy_kamera }} mp</td>
 													</tr>
 													<tr>
-														<th>Print Dimensions:</th>
-														<td>5600x4000</td>
+														<th>Old kamera:</th>
+														<td>{{ post.old_kamera }} mp</td>
+													</tr>
+													<tr>
+														<th>Batareya quvvati:</th>
+														<td>{{ post.batareya_quvvati }} mAh</td>
+													</tr>
+													<tr>
+														<th>Ekran dioganali:</th>
+														<td>{{ post.ekran_dioganali }} dyum</td>
+													</tr>
+													<tr>
+														<th>Protsessor:</th>
+														<td>{{ post.protsessor }}</td>
+													</tr>
+													<tr>
+														<th>Brand nomi:</th>
+														<td>{{ post.brand_nomi }}</td>
 													</tr>
 												</tbody>
 											</table>
@@ -445,13 +438,7 @@
 										<!-- End tab content -->
 
 										<!-- Begin tab content -->
-										<div id="sp-custom-content-1" class="tt-tab-content">
-											<h6>Regular License:</h6>
-											<p>Building mr concerns servants in he outlived am breeding. He so lain good miss when sell some at if. Told hand so an rich gave next. How doubt yet again see son smart. While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old.</p>
-
-											<h6>Extended License:</h6>
-											<p>Turned it up should no valley cousin he. Speaking numerous ask did horrible packages set. Ashamed herself has distant can studied mrs. Led therefore its middleton perpetual fulfilled provision frankness. Small he drawn after among every three no. All having but you edward genius though remark one.</p>
-										</div>
+								
 										<!-- End tab content -->
 
 										<!-- Begin tab content -->
